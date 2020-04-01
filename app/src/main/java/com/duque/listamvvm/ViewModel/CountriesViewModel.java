@@ -21,7 +21,6 @@ public class CountriesViewModel extends ViewModel {
 
         public MutableLiveData<List<CountriesModel>> countries = new MutableLiveData<List<CountriesModel>>();
         public CountriesServices countriesServices = new CountriesServices().getInstance();
-
         @Inject
         public CountriesModel countriesModel;
 
@@ -50,7 +49,6 @@ public class CountriesViewModel extends ViewModel {
 
     public void setPaises(){
 
-        //CountriesModel countriesModel = new CountriesModel("Espanha", "foda-se", "https://cdn.countryflags.com/thumbs/brazil/flag-button-round-250.png");
         Call<List<CountriesModel>> call = countriesServices.api.setCountries(countriesModel);
         call.enqueue(new Callback<List<CountriesModel>>() {
             @Override

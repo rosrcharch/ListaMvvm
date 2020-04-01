@@ -21,14 +21,14 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/title"
+            style="@style/Title"
             android:text="Country"/>
 
         <TextView
             android:id="@+id/capital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/text"
+            style="@style/Text"
             android:text="Capital"/>
 
     </LinearLayout>

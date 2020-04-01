@@ -54,10 +54,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-
         observerSetCountries();
-        //observerViewModel();
-
 
         adicionar.setOnClickListener(v -> {
             viewModel.countriesModel.setNameCountry(nome.getText().toString());
@@ -67,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Picasso vazio", Toast.LENGTH_SHORT).show();
             }else{
                 viewModel.countriesModel.setFlag(banderia.getText().toString());
+                //adicionando o Pais na lista
                 viewModel.setPaises();
             }
-            //Adicionando o Pais na lista
             viewModel.loadCountries();
         });
 
